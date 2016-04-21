@@ -1,0 +1,11 @@
+<h1> Currently Available Products</h1>
+<ul>
+	<% @products.each do |product| %>
+		<li>Product: <%= product.title %>
+			Description: <%= product.description %>
+			Deadline: <%= product.deadline %>
+		</li>
+	<% end %>
+</ul>
+
+<h4><%= link_to "View Current Products", products_path %></h4>
