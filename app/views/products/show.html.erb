@@ -1,0 +1,23 @@
+<h1> Product Details </h1>
+
+<h2>Product#: <%=@my_product.id %></h2>
+<h2>Product Name: <%=@my_product.title %></h2>
+<h2>Product Description: <%= @my_product.description %></h2>
+
+<h1> Bid on this Product </h1>
+
+
+<%= form_for [@my_product, @new_bid] do |f| %>
+	<%= label_tag 'email' %>
+	<%= text_field_tag 'email' %>
+
+	<%= f.label :amount %>
+	<%= f.number_field :amount, placeholder: "Bid Price" %>
+
+	<%= f.button %>
+<% end %>
+
+
+
+<h4><%= link_to "Return to Product Listings", products_path %></h4>
+

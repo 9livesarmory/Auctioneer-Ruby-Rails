@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
 	end
 
 	def show
-		
+		@my_product=Product.find(params[:id])
+		@new_bid=Bid.new
 	end
 
 	def new

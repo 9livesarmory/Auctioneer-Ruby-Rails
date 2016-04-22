@@ -4,8 +4,9 @@
 		<li>Product: <%= product.title %>
 			Description: <%= product.description %>
 			Deadline: <%= product.deadline %>
+			<%= link_to "Item Details", product_path(product) %>
 		</li>
 	<% end %>
 </ul>
 
-<h4><%= link_to "View Current Products", products_path %></h4>
+<h4><%= link_to "List an Item", new_product_path %></h4>
